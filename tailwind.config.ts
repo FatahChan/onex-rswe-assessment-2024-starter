@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -72,9 +72,27 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontSize: {
+        overline: [
+          "0.75rem",
+          { lineHeight: "1rem", letterSpacing: "0.0625rem" },
+        ],
+        subtitle2: ["1rem", { lineHeight: "1.25rem" }],
+        body1: ["1.25rem", { lineHeight: "2rem", letterSpacing: "0.00938rem" }],
+        body2: ["1rem", { lineHeight: "1.5rem", letterSpacing: "0.00938rem" }],
+        h4: [
+          "2.125rem",
+          { lineHeight: "2.6875rem", letterSpacing: "0.01563rem" },
+        ],
+        h5: ["1.5rem", { lineHeight: "2.25rem" }],
+        h6: [
+          "1.25rem",
+          { lineHeight: "1.5626rem", letterSpacing: "0.00938rem" },
+        ],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
