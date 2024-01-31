@@ -39,17 +39,22 @@ function ProdcutSectionSidebar({
   details,
   className,
 }: ProductSideProps) {
+  // TODO: Add currency formatting based on nav selection
+  const SGD = Intl.NumberFormat("en-SG", {
+    style: "currency",
+    currency: "SGD",
+  });
   return (
     <div className={cn("flex flex-col gap-6 items-start", className)}>
       <Badge className="oveline uppercase bg-cyan-200 text-blue-700">New</Badge>
       <h1 className="text-h4 font-semibold">{name}</h1>
       <p>
-        <span className="text-gray-400">VIN</span> {vin}
+        <span className="text-gray-400 font-semibold">VIN</span> {vin}
       </p>
 
       <Rating max={5} value={5} color="#FFB400" />
 
-      <h5 className="text-h5">${price}</h5>
+      <h5 className="text-h5">{SGD.format(price)}</h5>
       <hr className="w-full" />
 
       <ProductVariantSelector attributes={attributes} variants={variants} />

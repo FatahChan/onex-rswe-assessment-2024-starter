@@ -1,8 +1,8 @@
 const products: Product[] = [
   {
     id: 1,
-    name: "Product 1",
-    price: 10,
+    name: "2021 Tesla Model 3",
+    price: 41103,
     description: "This is a product",
     vin: "JN1AZ0CPOBT009448",
     specifications: [
