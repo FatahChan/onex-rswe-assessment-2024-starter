@@ -11,7 +11,6 @@ import Rating from "./ui/rating";
 import { Badge } from "./ui/badge";
 import ProductOrderButton from "./productOrderButton";
 import { cn } from "@/lib/utils";
-import { link } from "fs";
 import Link from "next/link";
 
 interface ProductSideProps {
